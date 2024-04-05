@@ -162,9 +162,9 @@ class HostKeyTest:
                 server_kex.set_host_key(host_key_type, raw_hostkey_bytes, hostkey_modulus_size, ca_key_type, ca_modulus_size)
 
                 # Set the hostkey size for all RSA key types since 'ssh-rsa', 'rsa-sha2-256', etc. are all using the same host key.  Note, however, that this may change in the future.
-                if cert is False and host_key_type in HostKeyTest.RSA_FAMILY:
-                    for rsa_type in HostKeyTest.RSA_FAMILY:
-                        server_kex.set_host_key(rsa_type, raw_hostkey_bytes, hostkey_modulus_size, ca_key_type, ca_modulus_size)
+                #if cert is False and host_key_type in HostKeyTest.RSA_FAMILY:
+                #    for rsa_type in HostKeyTest.RSA_FAMILY:
+                #        server_kex.set_host_key(rsa_type, raw_hostkey_bytes, hostkey_modulus_size, ca_key_type, ca_modulus_size)
 
                 # Close the socket, as the connection has
                 # been put in a state that later tests can't use.
